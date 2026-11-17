@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="pwe-bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="pwe-accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <filter id="pwe-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect x="10" y="10" width="108" height="108" rx="26" fill="url(#pwe-bg-grad)" stroke="#38bdf8" stroke-width="2.5" stroke-opacity="0.6" />
+  <path d="M 48 38 L 28 64 L 48 90" fill="none" stroke="#38bdf8" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M 96 36 L 58 92" fill="none" stroke="url(#pwe-accent)" stroke-width="8" stroke-linecap="round" filter="url(#pwe-glow)" />
+  <circle cx="100" cy="88" r="6" fill="#f8fafc" />
+</svg>

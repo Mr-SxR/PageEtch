@@ -1,0 +1,73 @@
+{
+  "manifest_version": 3,
+  "name": "PageEtch - Persistent Web Content Editor",
+  "short_name": "PageEtch",
+  "version": "2.0.0",
+  "description": "Edit and customize any webpage text or HTML with permanent persistence across reloads, SPA routing, and dynamic DOM updates.",
+  "homepage_url": "https://github.com/Mr-SxR/PageEtch",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "*://*/*",
+    "file://*/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "PageEtch",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "src/utils/helpers.js",
+        "src/core/selector.js",
+        "src/core/storage.js",
+        "src/ui/modal.js",
+        "src/ui/inspector.js",
+        "src/core/engine.js",
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icons/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "commands": {
+    "toggle-inspector": {
+      "suggested_key": {
+        "default": "Alt+Shift+E",
+        "mac": "Alt+Shift+E"
+      },
+      "description": "Toggle PageEtch Element Picker"
+    }
+  }
+}

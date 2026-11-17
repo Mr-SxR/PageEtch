@@ -1,0 +1,19 @@
+# Operating System
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors & IDEs
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Temporary logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
